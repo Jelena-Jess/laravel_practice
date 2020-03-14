@@ -25,8 +25,15 @@
         @include('inc.navbar');
 
         <main class="container py-4">
+            @include('inc.messages')
             @yield('content')
         </main>
     </div>
+
+    <script src="{{ asset('ckeditor/ckeditor.js') }}"></script>
+    <script>
+        CKEDITOR.replace('summary-ckeditor');
+    </script>
+
 </body>
 </html>
